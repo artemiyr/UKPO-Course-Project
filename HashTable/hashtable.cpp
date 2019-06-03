@@ -44,6 +44,9 @@
     }
 
     size_t hash(const Identifier& id) {
+        if (id.name().length() == 1) {
             return 2 * size_t(id.name()[0]);
+        }
+        return size_t(id.name()[0]) + size_t(id.name()[1]);
     }
 
