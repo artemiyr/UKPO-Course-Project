@@ -29,6 +29,8 @@ public:
     bool add(const Identifier& id);
     Identifier& get(const std::string& id_name);
     std::list<Identifier>& getFromKey (size_t Key);
+    bool removeElement (std::string);
+    bool removeElement (size_t);
     
 private:
     std::list<Identifier> m_hash_table[hash_table_size];
