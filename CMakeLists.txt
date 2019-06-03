@@ -1,10 +1,10 @@
 #cmake_minimum_required(VERSION 3.9)
-#project(sample)
+#project(hashtbl)
 
 #set(CMAKE_CXX_STANDARD 11)
 
 
-#add_executable(sample Sample/main.cpp Sample/hashtable.h Sample/hashtable.cpp)
+#add_executable(hashtbl HashTable/main.cpp HashTable/hashtable.h HashTable/hashtable.cpp)
 
 cmake_minimum_required(VERSION 3.5)
 project(TestSample LANGUAGES CXX)
@@ -17,12 +17,12 @@ include(CTest)
 enable_testing()
 
 add_library(hashtable
-	Sample/hashtable.h
-	Sample/hashtable.cpp
+	HashTable/hashtable.h
+	HashTable/hashtable.cpp
 )
 target_include_directories(hashtable
 	PUBLIC
-		Sample
+		HashTable
 )
 target_compile_options(hashtable
 	PRIVATE
@@ -33,7 +33,7 @@ target_compile_options(hashtable
 )
 
 add_executable(init_hashtable
-	Sample/main.cpp
+	HashTable/main.cpp
 )
 
 target_link_libraries(init_hashtable
