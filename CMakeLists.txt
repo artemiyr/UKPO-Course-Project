@@ -63,7 +63,7 @@ target_include_directories(Catch
 #
 add_executable(unit_tests
 	tests/main.cpp
-	tests/test1.cpp
+	tests/testHashTable.cpp
 )
 target_include_directories(unit_tests
 	PUBLIC
