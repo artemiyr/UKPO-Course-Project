@@ -25,6 +25,7 @@ TEST_CASE ("Hash-Table testing", "[hash-table]") {
     }
     
     
+    
     SECTION("Calculate hash-function for strings with different register") {
         INFO("Hash-function ignore register");
         REQUIRE(hash(Identifier("if-else")) != hash(Identifier("IF-ELSE")));
